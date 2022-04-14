@@ -42,11 +42,11 @@
     }
 
     @include respond(tab-port) {
-      max-height: 70%;
+      max-height: 80%;
     }
 
     @include respond(phone) {
-      max-height: 70%;
+      max-height: 80%;
     }
   }
 
