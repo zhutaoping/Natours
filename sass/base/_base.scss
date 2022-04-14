@@ -9,7 +9,7 @@
 html {
   // defines what 1rem is
   // 1rem = 10px  10px/16px = 62.5%
-  font-size: 62.5%;
+  font-size: 10px;
 
   @include respond(big-desktop) {
     //75% 1rem =12, 12/16
@@ -34,4 +34,9 @@ body {
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }

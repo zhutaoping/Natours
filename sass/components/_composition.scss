@@ -9,6 +9,7 @@
     outline-offset: 2rem;
 
     @include respond(tab-port) {
+      outline-offset: 1.2rem;
       float: left;
       position: relative;
       width: 33.3333%;
@@ -51,12 +52,23 @@
       outline: 1.5rem solid $color-primary;
       transform: scale(1.05) translateY(-5px);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      z-index: 20;
+      z-index: 200;
+
+      @include respond(tab-port) {
+        outline: 1rem solid $color-primary;
+        transform: scale(1.35) translateY(-5px);
+        box-shadow: 0 2rem 3rem rgba($color-black, 0.5);
+        z-index: 200;
+      }
     }
   }
 
   // when hover the composition, select the composition__photos that is not hovered.
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
+
+    @include respond(tab-port) {
+      transform: scale(1.15);
+    }
   }
 }

@@ -6,10 +6,17 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 8888;
-
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -moz-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
 
   &__content {
     @include absCenter;
@@ -29,17 +36,17 @@
     transition: all 0.4s 0.1s;
 
     @include respond(tab-land) {
-      height: 90%;
+      height: 80%;
       display: flex;
       flex-direction: column;
     }
 
     @include respond(tab-port) {
-      max-height: 75%;
+      max-height: 70%;
     }
 
     @include respond(phone) {
-      max-height: 80%;
+      max-height: 70%;
     }
   }
 
