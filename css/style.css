@@ -344,7 +344,7 @@ body {
   .card__price--value {
     font-size: 6rem;
     font-weight: 300; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 3px;
@@ -638,15 +638,15 @@ body {
     transition: all 0.4s 0.1s; }
     @media only screen and (max-width: 75em) {
       .popup__content {
-        height: 80%;
+        height: 80vh;
         display: flex;
         flex-direction: column; } }
     @media only screen and (max-width: 56.25em) {
       .popup__content {
-        height: 90vh; } }
+        height: 80vh; } }
     @media only screen and (max-width: 37.5em) {
       .popup__content {
-        height: 90vh; } }
+        height: 80vh; } }
   .popup__left {
     display: flex;
     flex-direction: column; }
@@ -668,6 +668,9 @@ body {
         height: 100%; } }
   .popup__img {
     width: 100%; }
+    @media only screen and (orientation: landscape) {
+      .popup__img {
+        display: none; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;

@@ -35,18 +35,18 @@
     transform: translate(-50%, -50%) scale(0.2);
     transition: all 0.4s 0.1s;
 
-    @include respond(tab-land) {
-      height: 80%;
+    @media only screen and (max-width: 75em) {
+      height: 80vh;
       display: flex;
       flex-direction: column;
     }
 
-    @include respond(tab-port) {
-      height: 90vh;
+    @media only screen and (max-width: 56.25em) {
+      height: 80vh;
     }
 
     @include respond(phone) {
-      height: 90vh;
+      height: 80vh;
     }
   }
 
@@ -79,6 +79,10 @@
 
   &__img {
     width: 100%;
+
+    @media only screen and (orientation: landscape) {
+      display: none;
+    }
   }
 
   &__text {
