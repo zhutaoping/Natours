@@ -643,10 +643,10 @@ body {
         flex-direction: column; } }
     @media only screen and (max-width: 56.25em) {
       .popup__content {
-        max-height: 80%; } }
+        height: 90vh; } }
     @media only screen and (max-width: 37.5em) {
       .popup__content {
-        max-height: 80%; } }
+        height: 90vh; } }
   .popup__left {
     display: flex;
     flex-direction: column; }
